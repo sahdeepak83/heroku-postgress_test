@@ -12,8 +12,8 @@ if (!$db) {
     exit;
 }
 //for insert command
- //$query = "INSERT INTO public.label VALUES (6,'vinod')";
- //$result = pg_query($query); 
+ $query = "INSERT INTO public.label VALUES (8,'testsetest')";
+ $result = pg_query($query); 
  //for update command
  /*$query="UPDATE public.label
 	SET  name='lore ipsum '
