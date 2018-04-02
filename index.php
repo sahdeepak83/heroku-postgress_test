@@ -28,7 +28,10 @@ $result = pg_query($db, "SELECT * FROM public.label ORDER BY id ASC ");
 
 	pg_close();
 //echo "<pre>";print_r($num);die; 
-function add($get=null){
+if(function_exists($_GET['f'])) {
+   add($_GET['f']);
+}
+function add($_GET['f']){
 	echo 'hi add function';
 	echo "<pre>";print_r($get);die;
 }
