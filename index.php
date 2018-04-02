@@ -12,8 +12,8 @@ if (!$db) {
     exit;
 }
 //for insert command
- $query = "INSERT INTO public.label VALUES (8,'testsetest')";
- $result = pg_query($query); 
+ //$query = "INSERT INTO public.label VALUES (8,'testsetest')";
+ //$result = pg_query($query); 
  //for update command
  /*$query="UPDATE public.label
 	SET  name='lore ipsum '
@@ -29,11 +29,31 @@ $result = pg_query($db, "SELECT * FROM public.label ORDER BY id ASC ");
 	pg_close();
 //echo "<pre>";print_r($num);die; 
 if(function_exists($_GET['f'])) {
-   add($_GET['f']);
+	$requeslUrl=$_GET['f'];
+   if($requeslUrl=='add'){
+	   add($requeslUrl);
+   }elseif($requeslUrl=='edit'){
+	    view($requeslUrl);
+   }elseif($requeslUrl=='view'){
+	    edit($requeslUrl);
+   }else{
+	   echo 'wrong data';die;
+   }
+	   
+}else{
+	echo 'wrong data url missing';exit;
 }
-function add($_GET['f']){
+function add($get){
 	echo 'hi add function';
-	echo "<pre>";print_r($get);return;
+	echo "<pre>";print_r($get);
+}
+function edit($get){
+	echo 'hi edit function';
+	echo "<pre>";print_r($get);
+}
+function view($get){
+	echo 'hi view function';
+	echo "<pre>";print_r($get);
 }
 ?>
 <table border="0" cellspacing="2" cellpadding="2">
