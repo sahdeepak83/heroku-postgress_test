@@ -33,7 +33,7 @@ if(function_exists($_GET['f'])) {
 }
 function add($_GET['f']){
 	echo 'hi add function';
-	echo "<pre>";print_r($get);die;
+	echo "<pre>";print_r($get);return;
 }
 ?>
 <table border="0" cellspacing="2" cellpadding="2">
