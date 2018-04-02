@@ -28,6 +28,10 @@ $result = pg_query($db, "SELECT * FROM public.label ORDER BY id ASC ");
 
 	pg_close();
 //echo "<pre>";print_r($num);die; 
+function add($get=null){
+	echo 'hi add function';
+	echo "<pre>";print_r($get);die;
+}
 ?>
 <table border="0" cellspacing="2" cellpadding="2">
 <tr>
